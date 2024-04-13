@@ -8,15 +8,15 @@ const Personal = () => {
   return (
     <>
           <button >
-        {isVisible ? 'content Hidden' : 'content visible'}
+        {isVisible ? 'content visible' : 'content Hidden'}
       </button>
-          <div className="flex items-center ">
+          <div className="flex items-center cursor-pointer mx-10 my-5" onClick={() => setIsVisible(!isVisible)}>
               {isVisible ? <RiArrowDownSFill size={50}/> : <FaPlay />}
-              <h1 onClick={() => setIsVisible(!isVisible)}>Personal Information</h1>
+              <h1>Personal Information</h1>
           </div>
           
           {isVisible && (
-          <div className="input-div ">
+          <div className="input-div mx-20 my-3">
               <label htmlFor="name">Name</label>
               <br />
               <input id="name" type="text" placeholder="Enter Name" />
