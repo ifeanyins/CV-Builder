@@ -1,6 +1,7 @@
 import Header from './Header';
 import Personal from './Personal';
 import Education from './Education';
+import WorkExp from './WorkExp';
 
 const Builder = () => {
   return (
@@ -10,6 +11,7 @@ const Builder = () => {
        <div className="left-side">
         <Personal />
         <Education />
+        <WorkExp />
       </div>
     </div>
     </div>
