@@ -15,7 +15,6 @@ const Education = () => {
           
           {isVisible && (
             <><College /><Senior /></>
-             
       )}
 
     </>
