@@ -4,22 +4,30 @@ import  { useState } from 'react';
 
 const Personal = () => {
     const [isVisible, setIsVisible] = useState(false);
-
+    const [Iname, setIname] = useState();
+    const [reveal, setReveal] = useState();
+    function handleInput (e){
+        setIname(e.target.value)
+    }
+    function handleReveal (e){
+        setReveal([..])
+    }
   return (
     <>
+
           <button >
         {isVisible ? 'content visible' : 'content Hidden'}
       </button>
           <div className="flex items-center cursor-pointer mx-10 my-5" onClick={() => setIsVisible(!isVisible)}>
               {isVisible ? <RiArrowDownSFill size={50}/> : <FaPlay />}
               <h1>Personal Information</h1>
-          </div>
+          </div> 
           
           {isVisible && (
           <div className="input-div mx-20 my-3">
               <label htmlFor="name">Name</label>
               <br />
-              <input id="name" type="text" placeholder="Enter Name" />
+              <input id="name" type="text" placeholder="Enter Name" onChange={handleInput}/>
               <br />
               <label htmlFor="Adress">Adress</label>
               <br />
